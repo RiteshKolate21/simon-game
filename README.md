@@ -71,10 +71,4 @@ Any new push to the GitHub repository will automatically redeploy the project.
 
 ---
 
-## 👨‍💻 Author
-
-**Ritesh Kolate**  
-GitHub: https://github.com/RiteshKolate21
-
----
 
