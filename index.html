@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
   <div class="game-container">
     <header>
       <h1>Simon Says</h1>
@@ -28,6 +28,50 @@
         <div class="btn three" type="button" id="three"></div>
         <div class="btn four" type="button" id="four"></div>
       </div>
+    </div>
+    <button id="rules-btn" class="rules-btn">Rules</button> <!-- Changed id to avoid conflicts & added class -->
+  </div>
+
+  <!-- Rules Overlay -->
+  <div class="rules-overlay" id="rules-overlay">
+    <div class="rules-content">
+      <h2>🎮 SIMON GAME – RULE BOOK</h2>
+
+      <div class="rule-item">
+        <span class="icon">▶️</span>
+        <p>Press any key to start</p>
+      </div>
+
+      <div class="rule-item">
+        <span class="icon">🎨</span>
+        <p>Watch the color sequence carefully</p>
+      </div>
+
+      <div class="rule-item">
+        <span class="icon">🖱️</span>
+        <p>Repeat the same sequence by clicking buttons</p>
+      </div>
+
+      <div class="rule-item">
+        <span class="icon">➕</span>
+        <p>One new color is added every level</p>
+      </div>
+
+      <hr>
+
+      <div class="rule-item danger">
+        <span class="icon">❌</span>
+        <p>Wrong click = Game Over</p>
+      </div>
+
+      <div class="rule-item">
+        <span class="icon">🔁</span>
+        <p>Press any key to restart</p>
+      </div>
+
+      <div class="good-luck">Good luck!</div>
+
+      <button class="close-btn" id="close-rules">Got it!</button>
     </div>
   </div>
 
