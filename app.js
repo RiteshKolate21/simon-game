@@ -1,19 +1,17 @@
 let gameSeq = [];
 let userSeq = [];
-let highScore=0;
-let btns = ["one","two","three","four"]
+let highScore = 0;
+let btns = ["one", "two", "three", "four"]
 
 let started = false;
 let level = 0;
 
 //h3 for level text
- let levelh3=document.querySelector('.h3');
+let levelh3 = document.querySelector('.h3');
 
-document.addEventListener('keypress',(event)=>
-{
+document.addEventListener('keypress', (event) => {
     event.stopPropagation();
-    if(started == false)
-    {
+    if (started == false) {
         started = true;
         console.log('game started');
         levelup();
@@ -21,33 +19,31 @@ document.addEventListener('keypress',(event)=>
 })
 
 
-function gameFlash(btn)
-{
+function gameFlash(btn) {
     btn.classList.add("flash");
-    setTimeout(function(){
+    setTimeout(function () {
         btn.classList.remove("flash");
-    },250);
+    }, 250);
 }
 
 
-function userFlash(btn)
-{
+function userFlash(btn) {
     btn.classList.add("userFlash");
-    setTimeout(function(){
+    setTimeout(function () {
         btn.classList.remove("userFlash");
-    },250);
+    }, 250);
 }
 
 
-function levelup()
-{   userSeq =[];
+function levelup() {
+    userSeq = [];
     level++;
-   
-    levelh3.innerText=`Level ${level}`;
-    
+
+    levelh3.innerText = `Level ${level}`;
+
     //choose random button
 
-    let randomind = Math.floor(Math.random()*4);
+    let randomind = Math.floor(Math.random() * 4);
     let randomcolor = btns[randomind];
 
     let randombtn = document.querySelector(`.${randomcolor}`);
@@ -60,49 +56,63 @@ function levelup()
     gameFlash(randombtn);
 }
 
-function checkAns(inx)
-{
-   
-    if(userSeq[inx] === gameSeq[inx])
-    {
-       if(userSeq.length == gameSeq.length)
-       {
-        setTimeout(levelup,1000);
-       }
+function checkAns(inx) {
+
+    if (userSeq[inx] === gameSeq[inx]) {
+        if (userSeq.length == gameSeq.length) {
+            setTimeout(levelup, 1000);
+        }
     }
-    else
-    {
-       levelh3.innerHTML=`Game Over! <br>Your Score was ${level} <br> Press Any Key To Restart`;
-       document.querySelector("body").style.backgroundColor='red';
-       setTimeout(function(){
-        document.querySelector("body").style.backgroundColor='white';
-       },150);
-       reset(); 
+    else {
+        levelh3.innerHTML = `Game Over! <br>Your Score was ${level} <br> Press Any Key To Restart`;
+        document.querySelector("body").style.backgroundColor = 'red';
+        setTimeout(function () {
+            document.querySelector("body").style.backgroundColor = 'white';
+        }, 150);
+        reset();
     }
     // console.log('Current Level', level);
 }
 
-function btnPress()
-{
-   let btn=this;
-   userFlash(btn);
-   let userColor = btn.getAttribute("id");
-   
-   userSeq.push(userColor);
-   checkAns(userSeq.length-1);
+function btnPress() {
+    let btn = this;
+    userFlash(btn);
+    let userColor = btn.getAttribute("id");
+
+    userSeq.push(userColor);
+    checkAns(userSeq.length - 1);
 }
 
 let allButton = document.querySelectorAll('.btn');
 
-for(btn of allButton)
-{
-    btn.addEventListener("click",btnPress)
+for (btn of allButton) {
+    btn.addEventListener("click", btnPress)
 }
 
 
-function reset(){
-       started = false;
-       gameSeq = [];
-       userSeq = [];
-       level = 0;
+function reset() {
+    started = false;
+    gameSeq = [];
+    userSeq = [];
+    level = 0;
 }
+
+// Rules Modal Logic
+const rulesBtn = document.getElementById("rules-btn");
+const rulesModal = document.getElementById("rules-modal");
+const closeBtn = document.querySelector(".close-btn");
+
+rulesBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // Prevent propagation to body if needed
+    rulesModal.classList.remove("hidden");
+});
+
+closeBtn.addEventListener("click", () => {
+    rulesModal.classList.add("hidden");
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === rulesModal) {
+        rulesModal.classList.add("hidden");
+    }
+});
