@@ -3,13 +3,17 @@
     --text-color: #2d3436;
     --btn-size: 150px;
     --gap: 20px;
-    
+
     /* Vibrant Palette */
-    --color-one: #00d2d3; /* Cyan */
-    --color-two: #ff9f43; /* Orange */
-    --color-three: #5f27cd; /* Purple */
-    --color-four: #1dd1a1; /* Lime/Green */
-    
+    --color-one: #00d2d3;
+    /* Cyan */
+    --color-two: #ff9f43;
+    /* Orange */
+    --color-three: #5f27cd;
+    /* Purple */
+    --color-four: #1dd1a1;
+    /* Lime/Green */
+
     --shadow-light: rgba(255, 255, 255, 0.8);
     --shadow-dark: rgba(0, 0, 0, 0.1);
 }
@@ -49,6 +53,7 @@ h1 {
     letter-spacing: -1px;
     background: linear-gradient(135deg, var(--text-color) 0%, #636e72 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -65,7 +70,7 @@ h1 {
     background: #fff;
     padding: 30px;
     border-radius: 50px;
-    box-shadow: 
+    box-shadow:
         20px 20px 60px var(--shadow-dark),
         -20px -20px 60px var(--shadow-light);
 }
@@ -131,8 +136,15 @@ h1 {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Responsive */
@@ -141,9 +153,11 @@ h1 {
         --btn-size: 100px;
         --gap: 15px;
     }
-    
-    h1 { font-size: 2rem; }
-    
+
+    h1 {
+        font-size: 2rem;
+    }
+
     .btn-container {
         padding: 20px;
         border-radius: 30px;
