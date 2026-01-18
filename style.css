@@ -29,9 +29,20 @@ body{
 }
 .three  
 {
-    background-color: rgb(161, 6, 122);
+    background-color: rgb(204, 13, 156);
 }
 .four  
 {
     background-color: rgb(197, 229, 16);
+}
+
+
+.flash
+{
+    background-color: white;
+}
+
+.userFlash
+{
+    background-color: rgb(54, 1, 1);
 }
