@@ -55,13 +55,10 @@ Any new push to the GitHub repository will automatically redeploy the project.
 
 ## 📂 Project Structure
 
-simon-game/
-│
-├── index.html
-├── style.css
-├── app.js
-└── README.md
-
+- index.html  
+- style.css  
+- app.js  
+- README.md  
 
 ---
 
