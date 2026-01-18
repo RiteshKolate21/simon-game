@@ -11,7 +11,7 @@ Test your memory by repeating an ever-growing sequence of colors!
 ## 📸 Preview
 ![Simon Game Preview](./preview.png)
 
-*(Optional: add a screenshot named `preview.png` in your repo)*
+
 
 ---
 
