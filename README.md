@@ -62,13 +62,6 @@ Any new push to the GitHub repository will automatically redeploy the project.
 
 ---
 
-## ✨ Future Improvements
 
-- 🔊 Add sound effects
-- 🏆 Store high score
-- 📱 Mobile-friendly design
-- 🎨 Better animations and UI
-
----
 
 
