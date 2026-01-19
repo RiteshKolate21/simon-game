@@ -3,9 +3,6 @@
 A fun and interactive **Simon Says memory game** built using **HTML, CSS, and JavaScript**.  
 Test your memory by repeating an ever-growing sequence of colors!
 
-🔗 **Live Demo:**  
-👉 https://simon-says-game-six-sand.vercel.app/
-
 ---
 
 ## 📸 Preview
