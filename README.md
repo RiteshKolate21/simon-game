@@ -12,8 +12,8 @@ Test your memory by repeating an ever-growing sequence of colors!
 
 ## How to Run
 1. Clone the repository
-   git clone https://github.com/your-username/simon-game.git
-2. Open index.html in your browser
+   git clone https://github.com/RiteshKolate21/simon-game.git
+3. Open index.html in your browser
 
 
 
