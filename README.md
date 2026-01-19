@@ -35,32 +35,6 @@ Test your memory by repeating an ever-growing sequence of colors!
 
 ---
 
-## 🛠️ Built With
-
-- **HTML** – Structure  
-- **CSS** – Styling & animations  
-- **JavaScript** – Game logic  
-- **Vercel** – Deployment  
-- **Git & GitHub** – Version control
-
----
-
-## 🚀 Deployment
-
-This project is deployed using **Vercel**.
-
-Any new push to the GitHub repository will automatically redeploy the project.
-
----
-
-## 📂 Project Structure
-
-- index.html  
-- style.css  
-- app.js  
-- README.md  
-
----
 
 
 
